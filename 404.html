@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; URL=/" />
+    <script>
+      // Redirection JavaScript pour préserver la route
+      const path = window.location.pathname;
+      const redirectTo = '/index.html';
+      if (path) {
+        window.location.replace(`${redirectTo}#${path}`);
+      } else {
+        window.location.replace(redirectTo);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
