@@ -4,7 +4,7 @@ import Recits from '../views/Recits.vue'
 import Personnages from '../views/Personnages.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/cba/'),
   routes: [
     {
       path: '/',
