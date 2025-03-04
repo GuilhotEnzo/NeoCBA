@@ -1,10 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Accueil from '../views/Accueil.vue'
 import Recits from '../views/Recits.vue'
 import Personnages from '../views/Personnages.vue'
+import Chapitre from '../views/Chapitre.vue'
+import HS from '../views/HS.vue'
 
 const router = createRouter({
-  history: createWebHistory('/NeoCBA/'),
+  history: createWebHashHistory('/NeoCBA/'),
   routes: [
     {
       path: '/',
@@ -20,6 +22,16 @@ const router = createRouter({
       path: '/personnages',
       name: 'Personnages',
       component: Personnages
+    },
+    {
+      path: '/chapitre/:id',
+      name: 'Chapitre',
+      component: Chapitre
+    },
+    {
+      path: '/hs/:id',
+      name: 'HS',
+      component: HS
     }
   ]
 })

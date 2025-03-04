@@ -5,3 +5,207 @@
 body {
   @apply bg-gray-50;
 }
+
+/* Général */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url('/konoha.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+img {
+  margin: auto;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Burger Menu (mobile uniquement) */
+.burger-menu {
+  display: none;
+  position: relative;
+}
+
+.burger-icon {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.burger-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+ {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.desktop-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-menu li {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.desktop-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.desktop-menu li a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+/* Main */
+main {
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+}
+
+.chapitre {
+  position: page;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: justify;
+  justify-content: center;
+  margin: auto;
+  padding: 50px;
+  width: 70%;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+/* Sommaire */
+.sommaire {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.sommaire li {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: auto auto 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.sommaire li a {
+  color: black;
+  text-decoration: none;
+}
+
+.sommaire li a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+/* Media Query pour mobile */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+
+.p-6 {
+  color: black;
+}
+
+.bg-white.shadow-lg {
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
