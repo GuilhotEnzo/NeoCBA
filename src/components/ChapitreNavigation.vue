@@ -1,7 +1,7 @@
 <template>
   <nav class="navigation">
     <router-link v-if="chapitreId > 1" :to="`/${recitType}/${chapitreId - 1}`">Chapitre Précédent</router-link>
-    <router-link v-if="chapitreId === 1" :to="`/recits`">Liste des chapitres</router-link>
+    <router-link :to="`/recits`">Liste des chapitres</router-link>
     <router-link v-if="chapitreExiste(chapitreId + 1)" :to="`/${recitType}/${chapitreId + 1}`">Chapitre Suivant
     </router-link>
   </nav>
