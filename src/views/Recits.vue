@@ -36,7 +36,7 @@ const hs = ref([]);
 
 const chargerChapitres = async () => {
   try {
-    const response = await fetch('chapitres.json');
+    const response = await fetch('json/chapitres.json');
     const data = await response.json();
 
     recits.value = Object.keys(data).map(id => ({
@@ -47,7 +47,7 @@ const chargerChapitres = async () => {
     console.error("Erreur lors du chargement des chapitres :", error);
   }
   try {
-    const response2 = await fetch('hs.json');
+    const response2 = await fetch('json/hs.json');
     const data2 = await response2.json();
 
     hs.value = Object.keys(data2).map(id => ({

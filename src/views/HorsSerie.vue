@@ -24,7 +24,7 @@ const contenuChapitre = computed(() => chapitres.value[chapitreId.value]?.conten
 
 const chargerChapitres = async () => {
   try {
-    const response = await fetch('hs.json');
+    const response = await fetch('json/hs.json');
     chapitres.value = await response.json();
   } catch (error) {
     console.error("Erreur lors du chargement des chapitres.json :", error);

@@ -27,7 +27,7 @@ const imagePerso = computed(() => personnages.value[personnageId.value]?.img || 
 
 const chargerpersonnages = async () => {
   try {
-    const response = await fetch('personnages.json');
+    const response = await fetch('json/personnages.json');
     personnages.value = await response.json();
   } catch (error) {
     console.error("Erreur lors du chargement des personnages.json :", error);

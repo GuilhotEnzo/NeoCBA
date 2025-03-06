@@ -1,7 +1,7 @@
 <template>
   <div class="chapitre">
     <ChapitreNavigation :chapitreId="chapitreId" :chapitreExiste="chapitreExiste" />
-    
+
     <h1>Chapitre {{ chapitreId }} - {{ titreChapitre }}</h1>
 
     <p v-if="contenuChapitre" v-html="contenuChapitre.replace(/\n/g, '<br>')"></p>
@@ -25,7 +25,7 @@ const contenuChapitre = computed(() => chapitres.value[chapitreId.value]?.conten
 
 const chargerChapitres = async () => {
   try {
-    const response = await fetch('chapitres.json');
+    const response = await fetch('json/chapitres.json');
     chapitres.value = await response.json();
   } catch (error) {
     console.error("Erreur lors du chargement des chapitres.json :", error);

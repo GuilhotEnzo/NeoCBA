@@ -22,7 +22,7 @@ const perso = ref([]);
 
 const chargerChapitres = async () => {
   try {
-    const response = await fetch('personnages.json');
+    const response = await fetch('json/personnages.json');
     const data = await response.json();
 
     perso.value = Object.keys(data).map(id => ({
