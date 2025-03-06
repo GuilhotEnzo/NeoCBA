@@ -47,7 +47,7 @@ const chargerChapitres = async () => {
     console.error("Erreur lors du chargement des chapitres :", error);
   }
   try {
-    const response2 = await fetch('json/hs.json');
+    const response2 = await fetch('json/hors-series.json');
     const data2 = await response2.json();
 
     hs.value = Object.keys(data2).map(id => ({
