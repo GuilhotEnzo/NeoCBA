@@ -39,6 +39,6 @@
         figure bien-aimée
         dans le village.
       </p>
-      <img src="/map.webp" alt="mapmonde" id="mapmonde">
+      <img src="/img/map.webp" alt="Carte du monde" id="mapmonde">
     </div>
 </template>
