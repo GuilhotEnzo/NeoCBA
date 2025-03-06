@@ -1,9 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Accueil from '../views/Accueil.vue'
-import Recits from '../views/Recits.vue'
-import Personnages from '../views/Personnages.vue'
-import Chapitre from '../views/Chapitre.vue'
-import HS from '../views/HS.vue'
+import Recits from "../views/Recits.vue";
+import Personnages from "../views/Personnages.vue";
+import Chapitre from "../views/Chapitre.vue";
+import HS from "../views/HS.vue";
+import Personnage from "../views/Personnage.vue";
 
 const router = createRouter({
   history: createWebHashHistory('/NeoCBA/'),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/hs/:id',
       name: 'HS',
       component: HS
+    },
+    {
+      path: '/personnage/:id',
+      name: 'Personnage',
+      component: Personnage
     }
   ]
 })
