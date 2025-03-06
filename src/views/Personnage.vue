@@ -1,14 +1,14 @@
 <template>
   <div class="chapitre">
-    <h1>{{ nompersonnage }}</h1>
-    <p v-if="contenupersonnage" v-html="contenupersonnage.replace(/\n/g, '<br>')"></p>
-    <p v-else>personnage non trouvé.</p>
-    <img :src="imgpersonnage" :alt="`Design de ${nompersonnage}`"/>
+    <h1>{{ nomPerso }}</h1>
+    <p v-if="contenuPerso" v-html="contenuPerso.replace(/\n/g, '<br>')"></p>
+    <p v-else>Personnage non trouvé.</p>
+    <img :src="imagePerso" :alt="`Design de ${nomPerso}`"/>
 
     <nav class="navigation">
-      <router-link v-if="personnageId > 1" :to="`/personnage/${personnageId - 1}`">personnage Précédent</router-link>
+      <router-link v-if="personnageId > 1" :to="`/personnage/${personnageId - 1}`">Personnage Précédent</router-link>
       <router-link v-if="personnageId = 1" :to="`/personnages`">Liste des personnages</router-link>
-      <router-link v-if="personnageExiste(personnageId + 1)" :to="`/personnage/${personnageId + 1}`">personnage Suivant</router-link>
+      <router-link v-if="personnageExiste(personnageId + 1)" :to="`/personnage/${personnageId + 1}`">Personnage Suivant</router-link>
     </nav>
   </div>
 </template>
@@ -21,9 +21,9 @@ const route = useRoute();
 const personnageId = computed(() => Number(route.params.id));
 
 const personnages = ref({});
-const nompersonnage = computed(() => personnages.value[personnageId.value]?.nom || "nom inconnu");
-const contenupersonnage = computed(() => personnages.value[personnageId.value]?.contenu || null);
-const imgpersonnage = computed(() => personnages.value[personnageId.value]?.img || null);
+const nomPerso = computed(() => personnages.value[personnageId.value]?.nom || "nom inconnu");
+const contenuPerso = computed(() => personnages.value[personnageId.value]?.contenu || null);
+const imagePerso = computed(() => personnages.value[personnageId.value]?.img || null);
 
 const chargerpersonnages = async () => {
   try {
