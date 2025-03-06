@@ -36,9 +36,8 @@
       <p>
         Son arrivée à Konoha avait apporté une touche de fraîcheur et d'originalité à la vie quotidienne des villageois.
         Chatoine, avec ses oreilles de chat, ses multiples talents et son amour pour les jeux vidéo, était devenu une
-        figure bien-aimée
-        dans le village, ajoutant une note unique à l'univers de Naruto.
+        figure bien-aimée dans le village.
       </p>
-      <img src="/map.webp" alt="mapmonde" id="mapmonde">
+      <img src="/img/map.webp" alt="Carte du monde" id="mapmonde">
     </div>
 </template>

@@ -15,7 +15,7 @@ body, html {
 }
 
 body {
-  background-image: url('/konoha.jpg');
+  background-image: url('/img/konoha.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

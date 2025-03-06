@@ -5,15 +5,20 @@
       Chargement des personnages...
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div v-for="(psg, index) in perso" :key="index" class="bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="p-6">
+      <div v-for="(psg, index) in perso" :key="index" class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+        <div class="p-6 flex flex-col flex-grow">
           <h2 class="text-xl font-semibold mb-2">{{ psg.nom }}</h2>
-          <router-link :to="`/personnage/${psg.id}`" class="text-blue-500 hover:text-blue-700 link-chap">Consulter le personnage</router-link>
+          <div class="mt-auto">
+            <router-link :to="`/personnage/${psg.id}`" class="text-blue-500 hover:text-blue-700 link-chap">
+              Consulter le personnage
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue';
@@ -22,7 +27,7 @@ const perso = ref([]);
 
 const chargerChapitres = async () => {
   try {
-    const response = await fetch('personnages.json');
+    const response = await fetch('json/personnages.json');
     const data = await response.json();
 
     perso.value = Object.keys(data).map(id => ({
