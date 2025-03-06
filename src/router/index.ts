@@ -3,7 +3,7 @@ import Accueil from '../views/Accueil.vue'
 import Recits from "../views/Recits.vue";
 import ListePersonnages from "../views/ListePersonnages.vue";
 import Chapitre from "../views/Chapitre.vue";
-import HS from "../views/HS.vue";
+import HorsSerie from "../views/HorsSerie.vue";
 import Personnage from "../views/Personnage.vue";
 
 const router = createRouter({
@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: '/hs/:id',
       name: 'HS',
-      component: HS
+      component: HorsSerie
     },
     {
       path: '/personnage/:id',
