@@ -23,7 +23,7 @@ const hs = ref([]);
 
 const chargerChapitres = async () => {
   try {
-    const response = await fetch('rapcontenders.json');
+    const response = await fetch('json/rapcontenders.json');
     const data = await response.json();
 
     recits.value = Object.keys(data).map(id => ({
