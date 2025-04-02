@@ -5,6 +5,7 @@ import Personnages from "../views/Personnages.vue";
 import Chapitre from "../views/Chapitre.vue";
 import HS from "../views/HS.vue";
 import Personnage from "../views/Personnage.vue";
+import Rapcontenders from "../views/Rapcontenders.vue";
 
 const router = createRouter({
   history: createWebHashHistory('/NeoCBA/'),
@@ -30,6 +31,11 @@ const router = createRouter({
       component: Chapitre
     },
     {
+      path: '/chapitre/:id/:type',
+      name: 'Chapitre',
+      component: Chapitre
+    },
+    {
       path: '/hs/:id',
       name: 'HS',
       component: HS
@@ -38,6 +44,11 @@ const router = createRouter({
       path: '/personnage/:id',
       name: 'Personnage',
       component: Personnage
+    },
+    {
+      path: '/RapContenders',
+      name: 'RapContenders',
+      component: Rapcontenders
     }
   ]
 })

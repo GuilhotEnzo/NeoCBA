@@ -14,6 +14,7 @@
         <div class="hidden md:flex items-center space-x-3">
           <router-link to="/" class="py-4 px-2 hover:text-blue-500">Accueil</router-link>
           <router-link to="/recits" class="py-4 px-2 hover:text-blue-500">Chapitres</router-link>
+          <router-link to="/rapcontenders" class="py-4 px-2 hover:text-blue-500">Rap Contenders</router-link>
           <router-link to="/personnages" class="py-4 px-2 hover:text-blue-500">Personnages</router-link>
         </div>
       </div>

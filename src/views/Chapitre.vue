@@ -5,9 +5,9 @@
     <p v-else>Chapitre non trouvé.</p>
 
     <nav class="navigation">
-      <router-link v-if="chapitreId > 1" :to="`/chapitre/${chapitreId - 1}`">Chapitre Précédent</router-link>
+      <router-link v-if="chapitreId > 1" :to="`/chapitre/${chapitreId - 1}/${type}`">Chapitre Précédent</router-link>
       <router-link v-if="chapitreId = 1" :to="`/recits`">Liste des chapitres</router-link>
-      <router-link v-if="chapitreExiste(chapitreId + 1)" :to="`/chapitre/${chapitreId + 1}`">Chapitre Suivant</router-link>
+      <router-link v-if="chapitreExiste(chapitreId + 1)" :to="`/chapitre/${chapitreId + 1}/${type}`">Chapitre Suivant</router-link>
     </nav>
   </div>
 </template>
@@ -17,7 +17,8 @@ import { ref, computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-const chapitreId = computed(() => Number(route.params.id));
+var chapitreId = computed(() => Number(route.params.id));
+var type = computed(() => String(route.params.type));
 
 const chapitres = ref({});
 const titreChapitre = computed(() => chapitres.value[chapitreId.value]?.titre || "Titre inconnu");
@@ -25,10 +26,10 @@ const contenuChapitre = computed(() => chapitres.value[chapitreId.value]?.conten
 
 const chargerChapitres = async () => {
   try {
-    const response = await fetch('chapitres.json');
+    const response = await fetch(type.value + '.json');
     chapitres.value = await response.json();
   } catch (error) {
-    console.error("Erreur lors du chargement des chapitres.json :", error);
+    console.error("Erreur lors du chargement des chapitres.json :", error, type.value+'.json');
   }
 };
 
